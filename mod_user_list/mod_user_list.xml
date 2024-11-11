@@ -1,0 +1,101 @@
+<extension type="module" version="4.9.9" method="upgrade">
+  <name>mod_user_list</name>
+  <author>VINEET JADHAV</author>
+  <version>1.0.0</version>
+  <description>A simple custom Joomla module</description>
+  <files>
+    <file module="mod_user_list">mod_user_list.php</file>
+    <folder>src</folder>
+    <folder>tmpl</folder>
+  </files>
+        <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+         <field
+    name="title"
+    type="sql"
+    label="Select User Groups"
+    query="SELECT id AS value, title AS text
+            FROM #__usergroups"
+    key_field="value"
+    value_field="text"
+    default="0"
+    multiple="true"
+/>
+
+ <!-- Yes/No Fields for Displaying Details on Frontend -->
+        <field
+          name="display_name"
+          type="radio"
+          label="Display Name"
+          description="Select whether to display the user's name on the frontend."
+          default="0"
+        >
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+
+        <field
+          name="display_username"
+          type="radio"
+          label="Display Username"
+          description="Select whether to display the user's username on the frontend."
+          default="0"
+        >
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+
+        <field
+   name="display_email"
+   type="radio"
+   label="Display Email"
+   description="Choose whether to display the user's email in the table."
+   default="0"
+   >
+   <option value="1">Yes</option>
+   <option value="0">No</option>
+</field>
+
+
+        <field
+          name="display_registration_date"
+          type="radio"
+          label="Display Registration Date"
+          description="Select whether to display the user's registration date on the frontend."
+          default="0"
+        >
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+
+        <field
+          name="display_last_login"
+          type="radio"
+          label="Display Last Login Date"
+          description="Select whether to display the user's last login date on the frontend."
+          default="0"
+        >
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+
+        <field
+          name="display_user_group"
+          type="radio"
+          label="Display User Group"
+          description="Select whether to display the user's group on the frontend."
+          default="0"
+        >
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+
+
+
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>
