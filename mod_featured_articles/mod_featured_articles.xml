@@ -1,0 +1,57 @@
+<extension type="module" version="4.9.9" method="upgrade">
+  <name>mod_featured_articles</name>
+  <author>VINEET JADHAV</author>
+  <version>1.0.0</version>
+  <description>A simple custom Joomla module</description>
+  <files>
+    <file module="mod_featured_articles">mod_featured_articles.php</file>
+    <folder>src</folder>
+    <folder>tmpl</folder>
+  </files>
+        <config>
+        <fields name="params">
+            <fieldset name="basic">
+              <field
+          name="No_of_featured_Articles"
+          type="number"
+          label="No Of Featured Articles"
+          description="Select No Of Featured Articles you want to see"
+          default="0"
+        >
+        </field>
+              <field name="categories" type="category" label="Select Categories" extension="com_content" filter="array" validate="options" multiple="true" />
+        <field
+          name="sorting_order"
+          type="list"
+          label="Sorting Order"
+          description="Select Sorting Order"
+          default="1"
+        >
+          <option value="1">Newest first</option>
+          <option value="2">Oldest first</option>
+          <option value="3">Alphabetical (Title)</option>
+        </field>
+
+         <!-- Yes/No Fields for Displaying Intro text on fronted or not -->
+        <field
+          name="intro_text"
+          type="radio"
+          label="Display Intro text"
+          description="Select whether to display the intro text on the frontend."
+          default="0"
+        >
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+
+
+
+
+
+
+              
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>
